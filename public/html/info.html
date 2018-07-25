@@ -1,0 +1,36 @@
+<div class="container">
+	<form ng-submit='createRecord(obj)' style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Telegram Bot</h1>
+    <p><span style='color:red'>*</span>Please fill in this form carefully.Enter required details to enjoy telegram bot services.</p>
+    <hr>
+
+    <label for="email"><b>First Name</b></label>
+    <input type="text" placeholder="Enter First name" ng-model ='obj.firstName' required>
+
+    <label for="psw"><b>Last Name</b></label>
+    <input type="text" placeholder="Enter last name" ng-model ='obj.lastName' required>
+
+    <label for="psw-repeat"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" ng-model ='obj.userName'>
+
+
+    <label for="psw-repeat"><b>Token</b></label>
+    <input type="password" placeholder="Enter token" ng-model ='obj.token' required>
+
+    <label for="psw-repeat"><b>Bot User name</b></label>
+    <input type="text" placeholder="Enter bot user name" ng-model ='obj.bot_userName' required>
+<!-- 
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label> -->
+
+    <p>By click on proceed you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+    <div class="clearfix">
+      <!-- <button type="button" class="cancelbtn">Cancel</button> -->
+      <button type="submit" class="signupbtn">Proceed</button>
+    </div>
+  </div>
+</form>
+</div>

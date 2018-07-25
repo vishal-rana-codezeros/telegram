@@ -1,0 +1,74 @@
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+
+
+<div >
+    <div class="container">
+        <div class="col-xs-6">
+            <div class="listening">
+                <button ng-click="triggerFn();" ng-disabled="disableTrigger" style="width:auto !important">Trigger Listener</button>
+            </div>
+        </div>
+        <div style="margin-top:20px" ng-show="disableTrigger">
+            <span>Listening.......</span>
+        </div>
+
+
+        <div class="col-xs-6">
+            <div class="listening">
+                <button ng-click="getUsers();" style="width:auto !important">Get Users</button>
+            </div>
+        </div>
+
+        <div style="margin-top:20px;" ng-show="hasGroup">
+
+            <table>
+                <tr>
+                    <th>S.No</th>
+                    <th>Id</th>
+                    <th>Name</th>
+                </tr>
+                <tr ng-repeat="data in Users">
+                    <td>{{$index+1}}</td>
+                    <td>{{data.userId}}</td>
+                    <td>{{data.groupName}}</td>
+                </tr>
+
+            </table>
+
+            <div class="listening">
+                <button ng-click="sendMessage();" style="width:auto !important">Send Message</button>
+            </div>
+        </div>
+
+
+        <div style="margin-top:20px" ng-show="noData">
+            <span>It has no data to show...Keep listening</span>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+    
+</div>
